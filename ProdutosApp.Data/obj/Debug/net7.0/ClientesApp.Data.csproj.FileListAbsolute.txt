@@ -1,0 +1,14 @@
+C:\Curso-coti\SistemaCliente\ProdutosApp.Data\bin\Debug\net7.0\ClientesApp.Data.deps.json
+C:\Curso-coti\SistemaCliente\ProdutosApp.Data\bin\Debug\net7.0\ClientesApp.Data.runtimeconfig.json
+C:\Curso-coti\SistemaCliente\ProdutosApp.Data\bin\Debug\net7.0\ClientesApp.Data.dll
+C:\Curso-coti\SistemaCliente\ProdutosApp.Data\bin\Debug\net7.0\ClientesApp.Data.pdb
+C:\Curso-coti\SistemaCliente\ProdutosApp.Data\obj\Debug\net7.0\ClientesApp.Data.csproj.AssemblyReference.cache
+C:\Curso-coti\SistemaCliente\ProdutosApp.Data\obj\Debug\net7.0\ClientesApp.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Curso-coti\SistemaCliente\ProdutosApp.Data\obj\Debug\net7.0\ClientesApp.Data.AssemblyInfoInputs.cache
+C:\Curso-coti\SistemaCliente\ProdutosApp.Data\obj\Debug\net7.0\ClientesApp.Data.AssemblyInfo.cs
+C:\Curso-coti\SistemaCliente\ProdutosApp.Data\obj\Debug\net7.0\ClientesApp.Data.csproj.CoreCompileInputs.cache
+C:\Curso-coti\SistemaCliente\ProdutosApp.Data\obj\Debug\net7.0\ClientesApp.Data.dll
+C:\Curso-coti\SistemaCliente\ProdutosApp.Data\obj\Debug\net7.0\refint\ClientesApp.Data.dll
+C:\Curso-coti\SistemaCliente\ProdutosApp.Data\obj\Debug\net7.0\ClientesApp.Data.pdb
+C:\Curso-coti\SistemaCliente\ProdutosApp.Data\obj\Debug\net7.0\ClientesApp.Data.genruntimeconfig.cache
+C:\Curso-coti\SistemaCliente\ProdutosApp.Data\obj\Debug\net7.0\ref\ClientesApp.Data.dll
