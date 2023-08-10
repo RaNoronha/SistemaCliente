@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Clientes</title>
+  <!-- Adicione os links para as bibliotecas do Bootstrap e Angular aqui -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="sidebar">
+    
+    <button class="sidebar-toggler" type="button">
+      <span class="sidebar-toggler-icon"></span>
+    </button>
+    <div class="sidebar-content">      
+      <ul class="sidebar-nav">
+        <li class="sidebar-item">
+          <a class="sidebar-link" href="#">           
+            <span class="text"><strong>SISTEMA CLIENTES</strong></span>
+          </a>
+        </li>
+        <!-- Ícone e link para cadastrar cliente -->
+        <li class="sidebar-item">
+          <a class="sidebar-link" href="#">
+            <fa-icon [icon]="iconecadastro"></fa-icon>
+            <span class="link-text"><strong>Cadastrar Cliente</strong></span>
+          </a>
+        </li>
+        <!-- Ícone e link para consultar cliente -->
+        <li class="sidebar-item">
+          <a class="sidebar-link" href="#">
+            <fa-icon [icon]="iconeconsulta"></fa-icon>
+            <span class="link-text"><strong>Consultar Cliente</strong></span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+      <!-- Conteúdo principal -->
+      <main class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+        <!-- Seu conteúdo principal aqui -->
+      </main>
+    
+
+  <!-- Adicione os scripts do Bootstrap e Angular aqui -->
+  <script src="https://kit.fontawesome.com/85389c61d5.js" crossorigin="anonymous"></script>
+</body>
+</html>

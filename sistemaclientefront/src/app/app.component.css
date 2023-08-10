@@ -1,0 +1,61 @@
+/* Estilos para a barra lateral */
+.sidebar {
+  width: 200px; /* Largura da barra lateral */
+  height: 100vh; /* Altura total da viewport */
+  background-color: #99b3e4b7; /* Cor de fundo da barra lateral */
+  position: relative;
+  top: 0;
+  left: 0;
+  box-shadow: 0 0 10px rgba(235, 23, 23, 0.767);
+}
+
+/* Estilos para o botão de toggle da barra lateral */
+.sidebar-toggler {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+/* Estilos para o ícone de toggle da barra lateral */
+.sidebar-toggler-icon {
+  font-size: 2.0rem;
+}
+
+/* Estilos para o conteúdo da barra lateral */
+.sidebar-content {
+  padding: 20px;
+}
+
+/* Estilos para a lista de navegação da barra lateral */
+.sidebar-nav {
+  list-style: none;
+  padding: 0;
+}
+
+/* Estilos para cada item da barra lateral */
+.sidebar-item {
+  margin-bottom: 15px;
+}
+
+/* Estilos para o ícone dentro de cada item */
+.sidebar-item .icon-expand {
+  font-size: 4.5rem;
+  transition: font-size 0.3s;
+}
+
+/* Estilos para o texto do link dentro de cada item */
+.sidebar-item .link-text {
+  display: none;
+  margin-left: 10px;
+}
+
+/* Estilos ao passar o mouse sobre um item */
+.sidebar-item:hover .icon-expand {
+  font-size: 2rem;
+}
+
+/* Mostrar o texto do link ao passar o mouse sobre um item */
+.sidebar-item:hover .link-text {
+  display: inline;
+}
