@@ -19,7 +19,7 @@ namespace ClientesApp.Data.Mappings
 
             builder.Property(p => p.Id).HasColumnName("ID");
             builder.Property(p => p.Nome).HasColumnName("NOME").HasMaxLength(150).IsRequired();
-            builder.Property(p => p.Cpf).HasColumnName("CPF").HasMaxLength(11).IsRequired();
+            builder.Property(p => p.Cpf).HasColumnName("CPF").HasMaxLength(14).IsRequired();
             builder.Property(p => p.DataNascimento).HasColumnName("DATANASCIMENTO").IsRequired();
             builder.Property(p => p.Email).HasColumnName("EMAIL").IsRequired();
             builder.Property(p => p.Telefone).HasColumnName("TELEFONE").IsRequired();

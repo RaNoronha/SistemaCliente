@@ -10,11 +10,11 @@ namespace SistemaCliente.Services.Model
         public string? Nome { get; set; }
 
         [Required(ErrorMessage = "Por favor, preencha o CPF")]
-        [StringLength(11,ErrorMessage ="Por favor, preencha o CPF com 11 dígitos")]
+        [StringLength(14,ErrorMessage ="Por favor, preencha o CPF com 14 dígitos")]
         public string? Cpf { get; set; }
 
         [Required(ErrorMessage = "Por favor, preencha o telefone")]
-        [StringLength(11, ErrorMessage ="Por favor, preencha o telefone com 11 dígitos")]
+        [StringLength(16, ErrorMessage ="Por favor, preencha um número de telefone válido")]
         public string? Telefone { get; set; }
 
         [Required(ErrorMessage = "Por favor, preencha o email")]
