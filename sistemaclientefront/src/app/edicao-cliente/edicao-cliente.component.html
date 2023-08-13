@@ -1,1 +1,40 @@
-<p>edicao-cliente works!</p>
+<div class="container">
+    <h2 class = "text-center">Cadastro de Cliente</h2>
+    <p class = "text-center">Os campos com * são obrigatórios</p>
+    <form>
+      <div class="row mb-4">
+        <div class = "col">
+            <label for="nome" class="form-label">Nome*</label>
+            <input type="text" class="form-control" id="nome" name="nome" required>
+        </div>
+        <div class = "col-md-3">
+            <label for="cpf" class="form-label">CPF*</label>          
+            <input type="text" class="form-control" id="cpf" name="cpf"  required>
+        </div>        
+      </div>
+
+      <div class="row mb-4">
+        <div class = "col-md-4">
+            <label for="telefone" class="form-label">Telefone*</label>
+            <input type="tel" class="form-control" id="telefone" name="telefone">
+        </div>
+        <div class = "col-md-4">
+            <label for="email" class="form-label">Email*</label>
+            <input type="email" class="form-control" id="email" name="email">
+        </div>
+        <div class = "col-md-4">
+            <label for="dataNascimento" class="form-label">Data de Nascimento*</label>
+            <input type="date" class="form-control" id="dataNascimento" name="dataNascimento">
+        </div>
+      </div>  
+      
+      <div class = "row mb-3">
+        <div clss = "col">
+            <input type="submit" class="btn btn-primary" value="Salvar Alteração" />&nbsp;&nbsp;
+            <a routerLink="/consulta-cliente" class="btn btn-success"> Voltar</a>
+        </div>        
+      </div>      
+    </form>
+  </div>
+  
+

@@ -1,1 +1,42 @@
-<p>consulta-cliente works!</p>
+<div class="container">
+    <h2 class = "text-center">Lista de Clientes</h2>
+    <p class = "text-center">Lista de todos clientes cadastrados</p>
+    <form>
+      <div class="row mb-4">
+        <div class = "table-responsive">
+            <table class="table table-sm table-hover">
+            <thead class="text-center">
+                <tr>
+                    <th>Nome</th>
+                    <th>CPF</th>
+                    <th>Data de Nascimento</th>
+                    <th>Idade</th>
+                    <th>Email</th>
+                    <th>Telefone</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody class="text-center">
+                <tr *ngFor="let item of clientes">
+                    <td>{{item.nome}}</td>
+                    <td>{{item.cpf}}</td>
+                    <td>{{item.dataNascimento | date:'dd/MM/yyyy'}}</td>
+                    <td>{{item.idade}}</td>
+                    <td>{{item.email}}</td>
+                    <td>{{item.telefone}}</td>                    
+                    <td>
+                        <a routerLink="/edicao-cliente" class="btn btn-outline-primary btn-sm"> Editar </a> &nbsp; 
+                        <button class="btn btn-outline-danger btn-sm"> Excluir </button>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr> <td colspan="7"> Total de registros: {{clientes.length}} </td> </tr>
+            </tfoot>
+            </table>
+        </div>
+      </div> 
+    </form>
+  
+  
+
