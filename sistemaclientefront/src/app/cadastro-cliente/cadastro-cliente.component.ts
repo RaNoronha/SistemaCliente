@@ -3,6 +3,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { enviroment } from 'src/Environment/environment';
+import Swal from 'sweetalert2';
 
 declare let Cleave: any;
 
@@ -12,9 +13,7 @@ declare let Cleave: any;
   styleUrls: ['./cadastro-cliente.component.css']
 })
 
-export class CadastroClienteComponent implements OnInit {
-
-  mensagem: string ='';
+export class CadastroClienteComponent implements OnInit {  
 
   constructor(
     private httpclient: HttpClient,
@@ -29,7 +28,7 @@ export class CadastroClienteComponent implements OnInit {
     dataNascimento: new FormControl('', [Validators.required])
   });
 
-  get form(): any {return this.formCadastro.controls;}
+  get form(): any {return this.formCadastro.controls;}  
 
   onSubmit(): void {
 
@@ -37,9 +36,12 @@ export class CadastroClienteComponent implements OnInit {
 
     this.httpclient.post(enviroment.apiClientes, this.formCadastro.value).subscribe({
       next:(data:any) => {
-        this.mensagem = `CLIENTE ${data.nome}, CADASTRADO COM SUCESSO.`;
+        Swal.fire({
+          icon:'success',
+          title: `Cliente ${data.nome}, cadastrado com sucesso.`        
+        });
         this.formCadastro.reset();
-      }
+      },
     }).add(() => {this.spinner.hide();});
   }
 

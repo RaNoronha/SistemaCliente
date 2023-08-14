@@ -1,9 +1,7 @@
 <div class="container">
     <h2 class = "text-center">Cadastro de Cliente</h2>
     <p class = "text-center">Os campos com * são obrigatórios</p>
-    <div class="mb-2 text-center">
-      <strong>{{mensagem}}</strong>
-    </div>
+    
     <form [formGroup]="formCadastro" (ngSubmit)="onSubmit()">
       <div class="row mb-4">
         <div class = "col">

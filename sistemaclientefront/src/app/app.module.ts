@@ -15,7 +15,7 @@ import { ContatoComponent } from './contato/contato.component';
 const routes : Routes = [
   {path : 'cadastro-cliente', component : CadastroClienteComponent},
   {path : 'consulta-cliente', component : ConsultaClienteComponent},
-  {path : 'edicao-cliente', component : EdicaoClienteComponent},
+  {path : 'edicao-cliente/:id', component : EdicaoClienteComponent},
   {path : 'contato', component : ContatoComponent}
 ]
 

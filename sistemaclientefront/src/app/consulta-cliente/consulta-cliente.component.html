@@ -25,8 +25,8 @@
                     <td>{{item.email}}</td>
                     <td>{{item.telefone}}</td>                    
                     <td>
-                        <a routerLink="/edicao-cliente" class="btn btn-outline-primary btn-sm"> Editar </a> &nbsp; 
-                        <button class="btn btn-outline-danger btn-sm"> Excluir </button>
+                        <a [routerLink]="['/edicao-cliente', item.id]" class="btn btn-outline-primary btn-sm"> Editar </a> &nbsp; 
+                        <button class="btn btn-outline-danger btn-sm" (click)="onDelete(item.id)"> Excluir </button>
                     </td>
                 </tr>
             </tbody>
