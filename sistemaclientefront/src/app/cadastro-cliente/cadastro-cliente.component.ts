@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
+import { NgxSpinnerService } from 'ngx-spinner';
+import { enviroment } from 'src/Environment/environment';
 
 declare let Cleave: any;
 
@@ -7,7 +11,37 @@ declare let Cleave: any;
   templateUrl: './cadastro-cliente.component.html',
   styleUrls: ['./cadastro-cliente.component.css']
 })
+
 export class CadastroClienteComponent implements OnInit {
+
+  mensagem: string ='';
+
+  constructor(
+    private httpclient: HttpClient,
+    private spinner: NgxSpinnerService
+    ){}
+
+  formCadastro = new FormGroup({
+    nome: new FormControl('', [Validators.required, Validators.minLength(8)]),
+    cpf: new FormControl('', [Validators.required, Validators.minLength(14)]),
+    telefone: new FormControl('', [Validators.required, Validators.minLength(16)]),
+    email: new FormControl('', [Validators.required]),
+    dataNascimento: new FormControl('', [Validators.required])
+  });
+
+  get form(): any {return this.formCadastro.controls;}
+
+  onSubmit(): void {
+
+    this.spinner.show();
+
+    this.httpclient.post(enviroment.apiClientes, this.formCadastro.value).subscribe({
+      next:(data:any) => {
+        this.mensagem = `CLIENTE ${data.nome}, CADASTRADO COM SUCESSO.`;
+        this.formCadastro.reset();
+      }
+    }).add(() => {this.spinner.hide();});
+  }
 
   ngOnInit(){
     new Cleave('#cpf', {

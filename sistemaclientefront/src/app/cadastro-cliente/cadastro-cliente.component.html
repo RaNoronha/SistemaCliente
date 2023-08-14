@@ -1,36 +1,60 @@
 <div class="container">
     <h2 class = "text-center">Cadastro de Cliente</h2>
     <p class = "text-center">Os campos com * são obrigatórios</p>
-    <form>
+    <div class="mb-2 text-center">
+      <strong>{{mensagem}}</strong>
+    </div>
+    <form [formGroup]="formCadastro" (ngSubmit)="onSubmit()">
       <div class="row mb-4">
         <div class = "col">
             <label for="nome" class="form-label">Nome*</label>
-            <input type="text" class="form-control" id="nome" name="nome" required>
+            <input type="text" class="form-control" id="nome" formControlName="nome" required>
+            <div *ngIf ="form.nome.touched && form.nome.invalid" class="text-danger">
+              <div *ngIf = "form.nome.errors.required">Por favor, informe o nome do cliente</div>
+              <div *ngIf = "form.nome.errors.minlength">Por favor, informe no mínimo 8 caracteres</div>
+            </div>
         </div>
+
         <div class = "col-md-3">
             <label for="cpf" class="form-label">CPF*</label>          
-            <input type="text" class="form-control" id="cpf" name="cpf"  required>
+            <input type="text" class="form-control" id="cpf" formControlName="cpf"  required>
+            <div *ngIf = "form.cpf.touched && form.cpf.invalid" class = "text-danger">
+              <div *ngIf = "form.cpf.errors.required">Por favor, informe o cpf do cliente</div>
+              <div *ngIf = "form.cpf.errors.minlength">Por favor, informe um cpf válido</div>
+            </div>
         </div>        
       </div>
 
       <div class="row mb-4">
         <div class = "col-md-4">
             <label for="telefone" class="form-label">Telefone*</label>
-            <input type="tel" class="form-control" id="telefone" name="telefone">
+            <input type="text" class="form-control" id="telefone" formControlName="telefone">
+            <div *ngIf = "form.telefone.touched && form.telefone.invalid" class = "text-danger">
+              <div *ngIf = "form.telefone.errors.required">Por favor, informe o telefone do cliente</div>
+              <div *ngIf = "form.telefone.errors.minlength">Por favor, informe um telefone válido</div>
+            </div>
         </div>
+
         <div class = "col-md-4">
             <label for="email" class="form-label">Email*</label>
-            <input type="email" class="form-control" id="email" name="email">
+            <input type="text" class="form-control" id="email" formControlName="email">
+            <div *ngIf = "form.email.touched && form.email.invalid" class = "text-danger">
+              <div *ngIf = "form.email.errors.required">Por favor, informe o email do cliente</div>             
+            </div>
         </div>
+
         <div class = "col-md-4">
             <label for="dataNascimento" class="form-label">Data de Nascimento*</label>
-            <input type="date" class="form-control" id="dataNascimento" name="dataNascimento">
+            <input type="date" class="form-control" id="dataNascimento" formControlName="dataNascimento">
+            <div *ngIf = "form.dataNascimento.touched && form.dataNascimento.invalid" class = "text-danger">
+              <div *ngIf = "form.dataNascimento.errors.required">Por favor, informe a data de nascimento do cliente</div>              
+            </div>
         </div>
       </div>  
       
       <div class = "row mb-3">
         <div clss = "col">
-            <input type="submit" class="btn btn-primary" value="Realizar Cadastro" />&nbsp;&nbsp;
+            <input type="submit" [disabled]="!formCadastro.valid" class="btn btn-primary" value="Realizar Cadastro" />&nbsp;&nbsp;
             <a routerLink="/consulta-cliente" class="btn btn-success"> Consultar Clientes</a>
         </div>        
       </div>      

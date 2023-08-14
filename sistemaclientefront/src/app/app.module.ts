@@ -2,6 +2,9 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
 import { HttpClientModule} from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgxSpinnerModule } from 'ngx-spinner';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { ConsultaClienteComponent } from './consulta-cliente/consulta-cliente.component';
@@ -27,7 +30,11 @@ const routes : Routes = [
   imports: [
     BrowserModule,    
     RouterModule.forRoot(routes),
-    HttpClientModule   
+    HttpClientModule,
+    BrowserAnimationsModule,
+    NgxSpinnerModule,
+    FormsModule, 
+    ReactiveFormsModule 
   ],
   providers: [], 
   bootstrap: [AppComponent]
