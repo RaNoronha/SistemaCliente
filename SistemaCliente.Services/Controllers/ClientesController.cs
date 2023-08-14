@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ApplicationModels;
-using ProdutosApp.Data.Entities;
+using ClientesApp.Data.Entities;
 using SistemaCliente.Services.Model;
 using System.Linq.Expressions;
 

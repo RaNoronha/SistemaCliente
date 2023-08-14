@@ -3644,8 +3644,8 @@
     },
     "ClientesApp.Data/1.0.0": {
       "type": "project",
-      "path": "../ProdutosApp.Data/ClientesApp.Data.csproj",
-      "msbuildProject": "../ProdutosApp.Data/ClientesApp.Data.csproj"
+      "path": "../ClientesApp.Data/ClientesApp.Data.csproj",
+      "msbuildProject": "../ClientesApp.Data/ClientesApp.Data.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -3689,8 +3689,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Curso-coti\\SistemaCliente\\ProdutosApp.Data\\ClientesApp.Data.csproj": {
-              "projectPath": "C:\\Curso-coti\\SistemaCliente\\ProdutosApp.Data\\ClientesApp.Data.csproj"
+            "C:\\Curso-coti\\SistemaCliente\\ClientesApp.Data\\ClientesApp.Data.csproj": {
+              "projectPath": "C:\\Curso-coti\\SistemaCliente\\ClientesApp.Data\\ClientesApp.Data.csproj"
             }
           }
         }
