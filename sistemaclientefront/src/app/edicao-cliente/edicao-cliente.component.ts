@@ -36,13 +36,14 @@ export class EdicaoClienteComponent implements OnInit{
         blocks: [3, 3, 3, 2],
         delimiters: ['.', '.', '-'],
         numericOnly: true
-        });
+      });
   
-        new Cleave('#telefone', {
-          blocks: [0,2, 1, 4, 4],
-          delimiters: ['(',') ', ' ', '-'],
-          numericOnly: true
-          });
+      new Cleave('#telefone', {
+        blocks: [0,2, 1, 4, 4],
+        delimiters: ['(',') ', ' ', '-'],
+        numericOnly: true
+      });
+
     }
 
   formEdicao = new FormGroup({

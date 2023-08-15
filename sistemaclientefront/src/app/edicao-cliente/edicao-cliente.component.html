@@ -1,5 +1,5 @@
 <div class="container">
-  <h2 class = "text-center">Cadastro de Cliente</h2>
+  <h2 class = "text-center">Edição de Cliente</h2>
   <p class = "text-center">Os campos com * são obrigatórios</p>
   
   <form [formGroup]="formEdicao" (ngSubmit)="onSubmit()">
@@ -53,7 +53,7 @@
     
     <div class = "row mb-3">
       <div clss = "col">
-          <input type="submit" [disabled]="!formEdicao.valid" class="btn btn-primary" value="Realizar Cadastro" />&nbsp;&nbsp;
+          <input type="submit" [disabled]="!formEdicao.valid" class="btn btn-primary" value="Salvar Alterações" />&nbsp;&nbsp;
           <a routerLink="/consulta-cliente" class="btn btn-success"> Consultar Clientes</a>
       </div>        
     </div>      
